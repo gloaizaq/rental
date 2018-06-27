@@ -10,6 +10,7 @@ class Shop(models.Model):
     watermeter = fields.Integer(string="Medidor Agua")
     currentmeter = fields.Integer(string="Medidor Electrico")
     floor_id = fields.Many2one('rental.floor', string="Piso")
+    document_id = fields.Many2one('rental.document', string="Documento")
 
 class Floor(models.Model):
     _name = 'rental.floor'
@@ -32,12 +33,12 @@ class Building(models.Model):
 class Document(models.Model):
     _name = 'rental.document'
 
-    client = fields.One2Many('res.partner', string="Cliente")
+    client_id = fields.Many2one('res.partner', string="Cliente")
     contract_number = fields.Integer(string="Numero de contrato")
-    shops = fields.One2Many('rental.shop', string="Locales")
+    shops = fields.One2many('rental.shop', 'document_id' , string="Locales")
     montly_rent_fee = fields.Float(string="Monto mensual")
     montly_manteinance_fee = fields.Float(string="Monto mantenimiento")
-    issued_invoices = One2Many('account.invoice', string="Facturas emitidas")
+    #issued_invoices = Many2one('account.invoice', string="Facturas emitidas")
     start_date = fields.Date(string="Fecha Inicio")
     end_date = fields.Date(string="Fecha Final")
     annual_increase_percentage = fields.Float(string="Porcentaje de incremento Anual")

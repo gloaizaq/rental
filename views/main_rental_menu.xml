@@ -79,5 +79,30 @@
       </field>
   </record>
 
-  <menuitem id="building_menu" name="Edificios" parent="rental_menu" action="building_list_action"/>7
+  <menuitem id="building_menu" name="Edificios" parent="rental_menu" action="building_list_action"/>
+
+  <record model="ir.actions.act_window" id="document_list_action">
+      <field name="name">Documentos</field>
+      <field name="res_model">rental.document</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click para agregar un documento de alquiler
+          </p>
+      </field>
+  </record>
+
+  <!-- <record model="ir.ui.view" id="document_list_view">
+      <field name="name">Lista de Documentos</field>
+      <field name="model">rental.document</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="client"/>
+              <field name="contact_number"/>
+          </tree>
+      </field>
+  </record> -->
+
+  <menuitem id="document_menu" name="Documentos" parent="rental_menu" action="document_list_action"/>
 </odoo>
