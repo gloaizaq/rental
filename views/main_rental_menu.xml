@@ -147,16 +147,40 @@
       </field>
   </record>
 
-  <!-- <record model="ir.ui.view" id="document_list_view">
+  <record model="ir.ui.view" id="document_list_view">
       <field name="name">Lista de Documentos</field>
       <field name="model">rental.document</field>
       <field name="arch" type="xml">
           <tree>
-              <field name="client"/>
-              <field name="contact_number"/>
+              <field name="client_id"/>
+              <field name="contract_number"/>
+              <field name="shops"/>
+              <field name="start_date"/>
+              <field name="end_date"/>
           </tree>
       </field>
-  </record> -->
+  </record>
+
+  <record model="ir.ui.view" id="document_form_view">
+      <field name="name">Documento</field>
+      <field name="model">rental.document</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="client_id"/>
+              <field name="contract_number"/>
+              <field name="shops" attrs="{'readonly': True}"/>
+              <field name="montly_rent_fee"/>
+              <field name="montly_manteinance_fee"/>
+              <field name="start_date" />
+              <field name="end_date"/>
+              <field name="annual_increase_percentage"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+  </record>
 
   <menuitem id="document_menu" name="Documentos" parent="rental_menu" action="document_list_action"/>
 </odoo>
