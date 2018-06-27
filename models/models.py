@@ -33,7 +33,7 @@ class Document(models.Model):
     _name = 'rental.document'
 
     client = fields.One2Many('res.partner', string="Cliente")
-    contact_number = fields.Integer(string="Numero de contrato")
+    contract_number = fields.Integer(string="Numero de contrato")
     shops = fields.One2Many('rental.shop', string="Locales")
     montly_rent_fee = fields.Float(string="Monto mensual")
     montly_manteinance_fee = fields.Float(string="Monto mantenimiento")
