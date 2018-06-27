@@ -24,8 +24,6 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
         'views/main_rental_menu.xml',
         'views/shop.xml',
         'views/building.xml',
@@ -34,7 +32,6 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
         'demo/shop_demo.xml',
         'demo/floor_demo.xml',
         'demo/building_demo.xml',
