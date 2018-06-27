@@ -54,5 +54,30 @@
       </field>
   </record>
 
-  <menuitem id="floor_menu" name="Pisos" parent="rental_menu" action="floor_list_action"/>
+  <menuitem id="floor_menu" name="Pisos" parent="rental_menu" action="floor_list_action"/>7
+
+  <record model="ir.actions.act_window" id="building_list_action">
+      <field name="name">Edificios</field>
+      <field name="res_model">rental.building</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click para agregar un edificio
+          </p>
+      </field>
+  </record>
+
+  <record model="ir.ui.view" id="building_list_view">
+      <field name="name">Lista de Edificios</field>
+      <field name="model">rental.building</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="name"/>
+              <field name="address"/>
+          </tree>
+      </field>
+  </record>
+
+  <menuitem id="building_menu" name="Edificios" parent="rental_menu" action="building_list_action"/>7
 </odoo>
