@@ -27,6 +27,10 @@
         'views/views.xml',
         'views/templates.xml',
         'views/main_rental_menu.xml',
+        'views/shop.xml',
+        'views/building.xml',
+        'views/floor.xml',
+        'views/document.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record model="ir.actions.act_window" id="shop_list_action">
+      <field name="name">Locales</field>
+      <field name="res_model">rental.shop</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click para agregar un local
+          </p>
+      </field>
+  </record>
+
+  <record model="ir.ui.view" id="shop_list_view">
+      <field name="name">Lista de Locales</field>
+      <field name="model">rental.shop</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="number"/>
+              <field name="area"/>
+              <field name="floor_id"/>
+          </tree>
+      </field>
+  </record>
+
+  <record model="ir.ui.view" id="shop_form_view">
+      <field name="name">Local</field>
+      <field name="model">rental.shop</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="number"/>
+              <field name="area"/>
+              <field name="watermeter"/>
+              <field name="currentmeter"/>
+              <field name="floor_id"/>
+              <field name="document_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+  </record>
+
+  <menuitem id="shop_menu" name="Locales" parent="rental_menu" action="shop_list_action"/>
+</odoo>

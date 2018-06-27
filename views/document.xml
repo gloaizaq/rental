@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+<record model="ir.actions.act_window" id="document_list_action">
+    <field name="name">Documentos de alquiler</field>
+    <field name="res_model">rental.document</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form,calendar</field>
+    <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click para agregar un documento de alquiler
+        </p>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="document_list_view">
+    <field name="name">Lista de Documentos</field>
+    <field name="model">rental.document</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="client_id"/>
+            <field name="contract_number"/>
+            <field name="shops"/>
+            <field name="start_date"/>
+            <field name="end_date"/>
+        </tree>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="document_form_view">
+    <field name="name">Documento</field>
+    <field name="model">rental.document</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="client_id"/>
+            <field name="contract_number"/>
+            <field name="shops" attrs="{'readonly': True}"/>
+            <field name="montly_rent_fee"/>
+            <field name="montly_manteinance_fee"/>
+            <field name="start_date" />
+            <field name="end_date"/>
+            <field name="annual_increase_percentage"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="document_calendar_view">
+    <field name="name">Documento</field>
+    <field name="model">rental.document</field>
+    <field name="arch" type="xml">
+      <calendar string="Calendario de documentos" date_start="start_date" date_stop="end_date">
+        <field name="contract_number" />
+      </calendar>
+    </field>
+</record>
+
+<menuitem id="document_menu" name="Documentos" parent="rental_menu" action="document_list_action"/>
+</odoo>
