@@ -42,6 +42,12 @@ class Building(models.Model):
     real_value = fields.Float(string="Valor Real")
     fiscal_value = fields.Float(string="Valor Fiscal")
 
+    _sql_constraints = [
+        ('mane_unique',
+         'UNIQUE(name)',
+         "Ya existe un edificio con ese nombre")
+    ]
+
 class Document(models.Model):
     _name = 'rental.document'
 
