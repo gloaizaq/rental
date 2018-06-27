@@ -5,7 +5,7 @@
   <menuitem id="rental_menu" name="Alquileres"
             parent="main_rental_menu"/>
 
-  <record model="ir.actions.act_window" id="rental_list_action">
+  <record model="ir.actions.act_window" id="shop_list_action">
       <field name="name">Locales</field>
       <field name="res_model">rental.shop</field>
       <field name="view_type">form</field>
@@ -29,8 +29,26 @@
       </field>
   </record>
 
+  <record model="ir.ui.view" id="shop_form_view">
+      <field name="name">Local</field>
+      <field name="model">rental.shop</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="number"/>
+              <field name="area"/>
+              <field name="watermeter"/>
+              <field name="currentmeter"/>
+              <field name="floor_id"/>
+              <field name="document_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+  </record>
 
-  <menuitem id="shop_menu" name="Locales" parent="rental_menu" action="rental_list_action"/>
+  <menuitem id="shop_menu" name="Locales" parent="rental_menu" action="shop_list_action"/>
 
   <record model="ir.actions.act_window" id="floor_list_action">
       <field name="name">Pisos</field>
