@@ -26,5 +26,18 @@ class Building(models.Model):
     total_area = fields.Float(string="Area de terreno")
     built_area = fields.Float(string="Area construida")
     floors = fields.One2many('rental.floor', 'building_id', string="Pisos")
-    real_value = fields.Float()
-    fiscal_value = fields.Float()
+    real_value = fields.Float(string="Valor Real")
+    fiscal_value = fields.Float(string="Valor Fiscal")
+
+class Document(models.Model):
+    _name = 'rental.document'
+
+    client = fields.One2Many('res.partner', string="Cliente")
+    contact_number = fields.Integer(string="Numero de contrato")
+    shops = fields.One2Many('rental.shop', string="Locales")
+    montly_rent_fee = fields.Float(string="Monto mensual")
+    montly_manteinance_fee = fields.Float(string="Monto mantenimiento")
+    issued_invoices = One2Many('account.invoice', string="Facturas emitidas")
+    start_date = fields.Date(string="Fecha Inicio")
+    end_date = fields.Date(string="Fecha Final")
+    annual_increase_percentage = fields.Float(string="Porcentaje de incremento Anual")
