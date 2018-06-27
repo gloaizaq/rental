@@ -72,6 +72,22 @@
       </field>
   </record>
 
+  <record model="ir.ui.view" id="floor_form_view">
+      <field name="name">Piso</field>
+      <field name="model">rental.floor</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="number"/>
+              <field name="shop" />
+              <field name="building_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+  </record>
+
   <menuitem id="floor_menu" name="Pisos" parent="rental_menu" action="floor_list_action"/>7
 
   <record model="ir.actions.act_window" id="building_list_action">
