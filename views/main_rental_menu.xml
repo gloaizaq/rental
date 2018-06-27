@@ -17,6 +17,19 @@
       </field>
   </record>
 
+  <record model="ir.ui.view" id="shop_list_view">
+      <field name="name">Lista de Locales</field>
+      <field name="model">rental.shop</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="number"/>
+              <field name="area"/>
+              <field name="floor_id"/>
+          </tree>
+      </field>
+  </record>
+
+
   <menuitem id="shop_menu" name="Locales" parent="rental_menu" action="rental_list_action"/>
 
   <record model="ir.actions.act_window" id="floor_list_action">
@@ -28,6 +41,16 @@
           <p class="oe_view_nocontent_create">
             Click para agregar un piso
           </p>
+      </field>
+  </record>
+
+  <record model="ir.ui.view" id="floor_list_view">
+      <field name="name">Lista de Pisos</field>
+      <field name="model">rental.floor</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="number"/>
+          </tree>
       </field>
   </record>
 
