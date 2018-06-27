@@ -16,6 +16,7 @@ class Floor(models.Model):
 
     number = fields.Integer(string="Numero")
     shop = fields.One2many('rental.shop', 'floor_id', string="Locales")
+    building_id = fields.Many2one('rental.building', string="Edificio")
 
 class Building(models.Model):
     _name = 'rental.building'
@@ -24,5 +25,6 @@ class Building(models.Model):
     address = fields.Text(string="Direccion")
     total_area = fields.Float(string="Area de terreno")
     built_area = fields.Float(string="Area construida")
+    floors = fields.One2many('rental.floor', 'building_id', string="Pisos")
     real_value = fields.Float()
     fiscal_value = fields.Float()
