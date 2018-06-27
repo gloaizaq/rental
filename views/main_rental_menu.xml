@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <menuitem id="main_rental_menu" name="Alquileres" />
+
+  <menuitem id="rental_menu" name="Alquileres"
+            parent="main_rental_menu"/>
+
+  <record model="ir.actions.act_window" id="rental_list_action">
+      <field name="name">Locales</field>
+      <field name="res_model">rental.shop</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click para crear un local
+          </p>
+      </field>
+  </record>
+
+  <menuitem id="localrent_menu" name="Locales" parent="rental_menu"
+            action="rental_list_action"/>
+</odoo>

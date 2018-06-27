@@ -2,14 +2,10 @@
 
 from odoo import models, fields, api
 
-# class rental(models.Model):
-#     _name = 'rental.rental'
+class Shop(models.Model):
+    _name = 'rental.shop'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+    number = fields.Integer(string="Numero")
+    area = fields.Float(string="Area")
+    watermeter = fields.Integer(string="Medidor Agua")
+    currentmeter = fields.Integer(string="Medidor Electrico")
