@@ -12,11 +12,24 @@
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
           <p class="oe_view_nocontent_create">
-            Click para crear un local
+            Click para agregar un local
           </p>
       </field>
   </record>
 
-  <menuitem id="localrent_menu" name="Locales" parent="rental_menu"
-            action="rental_list_action"/>
+  <menuitem id="shop_menu" name="Locales" parent="rental_menu" action="rental_list_action"/>
+
+  <record model="ir.actions.act_window" id="floor_list_action">
+      <field name="name">Pisos</field>
+      <field name="res_model">rental.floor</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click para agregar un piso
+          </p>
+      </field>
+  </record>
+
+  <menuitem id="floor_menu" name="Pisos" parent="rental_menu" action="floor_list_action"/>
 </odoo>
