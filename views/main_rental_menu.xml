@@ -79,9 +79,8 @@
         <form>
           <sheet>
             <group>
-              <field name="id" invisible="1"/>
               <field name="number"/>
-              <field name="shop" attrs="{'readonly':[('id', '!=', False)]}"/>
+              <field name="shop" attrs="{'readonly': True}"/>
               <field name="building_id"/>
             </group>
           </sheet>
