@@ -113,6 +113,26 @@
       </field>
   </record>
 
+  <record model="ir.ui.view" id="building_form_view">
+      <field name="name">Edificio</field>
+      <field name="model">rental.building</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="address"/>
+              <field name="total_area"/>
+              <field name="built_area"/>
+              <field name="floors" attrs="{'readonly': True}"/>
+              <field name="real_value"/>
+              <field name="fiscal_value"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+  </record>
+
   <menuitem id="building_menu" name="Edificios" parent="rental_menu" action="building_list_action"/>
 
   <record model="ir.actions.act_window" id="document_list_action">
