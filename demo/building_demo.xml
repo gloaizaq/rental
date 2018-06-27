@@ -1,0 +1,28 @@
+<odoo>
+  <record model="rental.building" id="builgind1">
+    <field name="name">Building 1</field>
+    <field name="address">300 mts norte</field>
+    <field name="total_area">1</field>
+    <field name="built_area">1</field>
+    <field name="real_value">1</field>
+    <field name="fiscal_value">1</field>
+  </record>
+
+  <record model="rental.building" id="builgind2">
+    <field name="name">Building 2</field>
+    <field name="address">400 mts norte</field>
+    <field name="total_area">4</field>
+    <field name="built_area">4</field>
+    <field name="real_value">4</field>
+    <field name="fiscal_value">4</field>
+  </record>
+
+  <record model="rental.building" id="builgind3">
+    <field name="name">Building 3</field>
+    <field name="address">500 mts norte</field>
+    <field name="total_area">3</field>
+    <field name="built_area">3</field>
+    <field name="real_value">3</field>
+    <field name="fiscal_value">3</field>
+  </record>
+</odoo>

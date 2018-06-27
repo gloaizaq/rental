@@ -1,0 +1,22 @@
+<odoo>
+  <record model="rental.shop" id="shop1">
+    <field name="number">1</field>
+    <field name="area">1</field>
+    <field name="watermeter">1</field>
+    <field name="currentmeter">1</field>
+  </record>
+
+  <record model="rental.shop" id="shop2">
+    <field name="number">2</field>
+    <field name="area">2</field>
+    <field name="watermeter">2</field>
+    <field name="currentmeter">2</field>
+  </record>
+
+  <record model="rental.shop" id="shop3">
+    <field name="number">3</field>
+    <field name="area">3</field>
+    <field name="watermeter">3</field>
+    <field name="currentmeter">3</field>
+  </record>
+</odoo>

@@ -31,5 +31,9 @@
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
+        'demo/shop_demo.xml',
+        'demo/floor_demo.xml',
+        'demo/building_demo.xml',
+        'demo/document_demo.xml',
     ],
 }

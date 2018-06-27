@@ -1,0 +1,28 @@
+<odoo>
+  <record model="rental.document" id="document1">
+    <field name="contract_number">1</field>
+    <field name="montly_rent_fee">1</field>
+    <field name="montly_manteinance_fee">1</field>
+    <field name="start_date">1/1/18</field>
+    <field name="end_date">1/1/18</field>
+    <field name="annual_increase_percentage">1</field>
+  </record>
+
+  <record model="rental.document" id="document2">
+    <field name="contract_number">2</field>
+    <field name="montly_rent_fee">2</field>
+    <field name="montly_manteinance_fee">2</field>
+    <field name="start_date">2/2/18</field>
+    <field name="end_date">2/2/18</field>
+    <field name="annual_increase_percentage">2</field>
+  </record>
+
+  <record model="rental.document" id="document3">
+    <field name="contract_number">3</field>
+    <field name="montly_rent_fee">3</field>
+    <field name="montly_manteinance_fee">3</field>
+    <field name="start_date">3/3/18</field>
+    <field name="end_date">3/3/18</field>
+    <field name="annual_increase_percentage">3</field>
+  </record>
+</odoo>

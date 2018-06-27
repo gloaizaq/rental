@@ -1,0 +1,13 @@
+<odoo>
+  <record model="rental.floor" id="floor1">
+    <field name="number">1</field>
+  </record>
+
+  <record model="rental.floor" id="floor2">
+    <field name="number">2</field>
+  </record>
+
+  <record model="rental.floor" id="floor3">
+    <field name="number">3</field>
+  </record>
+</odoo>
