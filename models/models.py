@@ -12,6 +12,12 @@ class Shop(models.Model):
     floor_id = fields.Many2one('rental.floor', string="Piso")
     document_id = fields.Many2one('rental.document', string="Documento")
 
+    _sql_constraints = [
+        ('number_unique',
+         'UNIQUE(number)',
+         "Ya existe un local con ese numero")
+    ]
+
 class Floor(models.Model):
     _name = 'rental.floor'
 
